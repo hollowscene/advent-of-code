@@ -40,7 +40,7 @@ def sonar_sweep(measurements:list) -> int:
         m = int(m)
         if m > tmp:
             n_increases += 1
-            tmp = m
+        tmp = m
     
     return n_increases
     
