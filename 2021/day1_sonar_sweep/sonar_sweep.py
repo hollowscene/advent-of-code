@@ -16,22 +16,33 @@ import numpy as np
 # %%
 
 def sonar_sweep(measurements:list) -> int:
-    """Return number of consecutively increasing numbers.
+    """Returns number of increasing measurements.
+    
+    Iterates through measurements and increments n_increases whenever 
+    measurements[i] is larger than measurements[i-1].
 
     Parameters
     ----------
     measurements : list
-        DESCRIPTION.
+        A list of depth measurements as strings.
 
     Returns
     -------
-    int
-        DESCRIPTION.
+    n_increases : int
+        The number of times a depth measurement increases from the previous.
 
     """
-    # create a new list for the difference between consecutive measurements
-    # then just take the length of this new list
-    return measurements
+    n_increases = 0
+    
+    tmp = int(measurements[0])
+    # Iterate through every measurement and compare to previous
+    for m in measurements:
+        m = int(m)
+        if m > tmp:
+            n_increases += 1
+            tmp = m
+    
+    return n_increases
     
 
 # %%
