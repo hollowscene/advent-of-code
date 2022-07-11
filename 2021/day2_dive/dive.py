@@ -24,7 +24,7 @@ def dive(instructions: list) -> list:
 
     Returns
     -------
-    horizontal_position, depth : tuple
+    horizontal_position, depth : int, int
         The horizontal position and depth of the submarine after following the
         planned course.
 
@@ -32,8 +32,8 @@ def dive(instructions: list) -> list:
     horizontal_position = 0
     depth = 0
 
-    for ins in instructions:
-        direction, units = ins.split(" ")
+    for line in instructions:
+        direction, units = line.split(" ")
         move = int(units)
         if direction == "forward":
             horizontal_position += move
@@ -61,7 +61,7 @@ def updated_dive(instructions: list) -> list:
 
     Returns
     -------
-    horizontal_position, depth : tuple
+    horizontal_position, depth : int, int
         The horizontal position and depth of the submarine after following the
         updated planned course.
 
@@ -70,8 +70,8 @@ def updated_dive(instructions: list) -> list:
     depth = 0
     aim = 0
 
-    for ins in instructions:
-        direction, units = ins.split(" ")
+    for line in instructions:
+        direction, units = line.split(" ")
         move = int(units)
         if direction == "forward":
             horizontal_position += move
