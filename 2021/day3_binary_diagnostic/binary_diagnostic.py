@@ -44,6 +44,27 @@ def binary_diagnostic(report: list) -> list:
     return (gamma_rate, epsilon_rate)
 
 
+def binary_life_support_diagnostic(report: list) -> list:
+    """Return most common and least common bits in each position.
+
+    Parameters
+    ----------
+    report : list
+        List of binary numbers as strings.
+
+    Returns
+    -------
+    oxygen_generator_rating, co2_scrubbing_rating : str, str
+        x
+
+    """
+
+
+
+
+    return (oxygen_generator_rating, co2_scrubbing_rating)
+
+
 # %%
 
 if __name__ == "__main__":
