@@ -92,7 +92,7 @@ def rock_paper_scissors_decrypted(strategy_guide: list) -> int:
 # %%
 
 if __name__ == "__main__":
-    input_path = "advent-of-code\\2022\\day2_rock_paper_scissors\\input.txt"
+    input_path = "advent_of_code\\2022\\day2_rock_paper_scissors\\input.txt"
     strategy_guide = load.read_input_to_list(input_path)
 
     total_score = rock_paper_scissors(strategy_guide)

@@ -31,7 +31,7 @@ def calorie_counting(calories_list: list) -> int:
 # %%
 
 if __name__ == "__main__":
-    input_path = "advent-of-code\\2022\\day1_calorie_counting\\input.txt"
+    input_path = "advent_of_code\\2022\\day1_calorie_counting\\input.txt"
     calories_list = load.read_input_to_list(input_path)
 
     sorted_calories = calorie_counting(calories_list)
